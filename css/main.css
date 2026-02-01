@@ -1,0 +1,262 @@
+@font-face {
+    font-family: Roboto;
+    src: url('../font/Roboto-Regular.ttf');
+}
+
+@font-face {
+    font-family: "Kanit Regular";
+    src: url('../font/Kanit-Light.ttf');
+}
+
+@font-face {
+    font-family: Digital7;
+    src: url('../font/digital-7.ttf');
+}
+
+@font-face {
+    font-family: Bebas Neue;
+    src: url('../font/BebasNeue-Regular.ttf');
+}
+
+:root {
+    font-family: Roboto, Kanit Regular , cursive;
+    /*scroll-behavior: smooth;*/
+}
+
+.strong-font{
+    font-family: Bebas Neue, Kanit Regular , cursive;
+}
+
+.digital{
+    font-family: Digital7, Kanit Regular , cursive;
+}
+
+
+.trapezoid {
+    border-top: 100vh solid #fbbf24;
+    border-right: 300px solid transparent;
+    height: 0;
+    width: 100%;
+}
+
+.g-gold-t{
+    background: linear-gradient(to bottom,  rgba(252, 211, 77,0.1), transparent);
+}
+
+.g-gold{
+    background: linear-gradient(to left,  rgba(252, 211, 77,0.05), rgba(252, 211, 77,0.03), rgba(252, 211, 77,0.01), transparent);
+}
+
+
+.t-tl {
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 10px 10px 0 0;
+    border-color: rgba(252,211,77,0.3) transparent transparent transparent;
+    transform: rotate(0deg);
+}
+
+.bg-sky{
+    background-color: rgba(0, 200, 255, 1);
+}
+
+.border-sky{
+    border-color: rgba(0, 200, 255, 1);
+}
+
+.border-amber{
+    border-color: #fcd34d;
+}
+
+.g-black{
+    background: linear-gradient(transparent, rgba(0, 0, 0,1.0), );
+}
+
+.g-purple{
+    background: linear-gradient(transparent, rgba(232, 121, 249,0.5));
+}
+
+.g-rare-0{
+    background: linear-gradient(transparent, rgba(255, 255, 255,0.1));
+}
+
+.g-rare-1{
+    background: linear-gradient(transparent, rgba(14, 165, 233,0.1));
+}
+
+.g-rare-2{
+    background: linear-gradient(transparent, rgba(236, 72, 153,0.1));
+}
+
+.lds-dual-ring {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+}
+.lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid #fff;
+    border-color: #fff transparent #fff transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loader {
+    width: 30px;
+    aspect-ratio: 1;
+    --c: no-repeat linear-gradient(rgba(255,255,255, 0.5) 0 0);
+    background:
+            var(--c) 0%   50%,
+            var(--c) 50%  50%,
+            var(--c) 100% 50%;
+    background-size: 20% 100%;
+    animation: l1 0.7s infinite linear;
+}
+@keyframes l1 {
+    0%  {background-size: 20% 100%,20% 100%,20% 100%}
+    33% {background-size: 20% 10% ,20% 100%,20% 100%}
+    50% {background-size: 20% 100%,20% 10% ,20% 100%}
+    66% {background-size: 20% 100%,20% 100%,20% 10% }
+    100%{background-size: 20% 100%,20% 100%,20% 100%}
+}
+
+.g-gold-t{
+    background: linear-gradient(to top , rgba(252,211,77,0.1) , rgba(252,211,77,0.05) ,transparent);
+}
+
+.grid-texture{
+    background-color: rgba(0,0,0,0.8);
+    opacity: 0.15;
+    background-image:  linear-gradient(rgba(255,255,255,0.1) 0.6000000000000001px, transparent 0.6000000000000001px), linear-gradient(to right, rgba(255,255,255,0.1) 0.6000000000000001px, rgba(0,0,0,0.8) 0.6000000000000001px);
+    background-size: 20px 20px;
+}
+
+/*.loader {*/
+/*    transform: rotateZ(45deg);*/
+/*    perspective: 1000px;*/
+/*    border-radius: 50%;*/
+/*    width: 60px;*/
+/*    height: 60px;*/
+/*    color: #fff;*/
+/*}*/
+/*.loader:before,*/
+/*.loader:after {*/
+/*    content: '';*/
+/*    display: block;*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    width: inherit;*/
+/*    height: inherit;*/
+/*    border-radius: 50%;*/
+/*    transform: rotateX(70deg);*/
+/*    animation: 1s spin linear infinite;*/
+/*}*/
+/*.loader:after {*/
+/*    color: #fbbf24;*/
+/*    transform: rotateY(70deg);*/
+/*    animation-delay: .4s;*/
+/*}*/
+
+/*@keyframes rotate {*/
+/*    0% {*/
+/*        transform: translate(-50%, -50%) rotateZ(0deg);*/
+/*    }*/
+/*    100% {*/
+/*        transform: translate(-50%, -50%) rotateZ(360deg);*/
+/*    }*/
+/*}*/
+
+/*@keyframes rotateccw {*/
+/*    0% {*/
+/*        transform: translate(-50%, -50%) rotate(0deg);*/
+/*    }*/
+/*    100% {*/
+/*        transform: translate(-50%, -50%) rotate(-360deg);*/
+/*    }*/
+/*}*/
+
+/*@keyframes spin {*/
+/*    0%,*/
+/*    100% {*/
+/*        box-shadow: .2em 0px 0 0px currentcolor;*/
+/*    }*/
+/*    12% {*/
+/*        box-shadow: .2em .2em 0 0 currentcolor;*/
+/*    }*/
+/*    25% {*/
+/*        box-shadow: 0 .2em 0 0px currentcolor;*/
+/*    }*/
+/*    37% {*/
+/*        box-shadow: -.2em .2em 0 0 currentcolor;*/
+/*    }*/
+/*    50% {*/
+/*        box-shadow: -.2em 0 0 0 currentcolor;*/
+/*    }*/
+/*    62% {*/
+/*        box-shadow: -.2em -.2em 0 0 currentcolor;*/
+/*    }*/
+/*    75% {*/
+/*        box-shadow: 0px -.2em 0 0 currentcolor;*/
+/*    }*/
+/*    87% {*/
+/*        box-shadow: .2em -.2em 0 0 currentcolor;*/
+/*    }*/
+/*}*/
+
+
+
+/*.btn-item:hover .item-detail {*/
+/*    background-color: white;*/
+/*}*/
+
+/*.btn-item:hover .text-price {*/
+/*    color: white;*/
+/*}*/
+
+/*.btn-item:hover .text-label {*/
+/*    color: white;*/
+/*    font-size: 1rem;*/
+/*}*/
+
+/*.btn-item:hover .img-price {*/
+/*    content:url("../img/menu/dollar-active.png");*/
+/*}*/
+
+/*.img-item{*/
+/*    transition: transform .3s;*/
+/*}*/
+
+/*.btn-item:hover .img-item {*/
+/*    transform: scale(1.2);*/
+/*}*/
+
+.bg-size {
+    width: 100vw;
+    height: 100vh;
+}
+
+/*@media (min-width: 2200px) {*/
+/*    .bg-size {*/
+/*        width: 1100px;*/
+/*        height: 680px;*/
+/*    }*/
+
+
+/*}*/
+
+
+
