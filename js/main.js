@@ -181,7 +181,8 @@ document.addEventListener("DOMContentLoaded", async(event) => {
 
 
     showLoading('main')
-    myToken = getParam('token')
+    // myToken = getParam('token')
+    myToken = 382
 
 
     const res = await getPlayerName()
