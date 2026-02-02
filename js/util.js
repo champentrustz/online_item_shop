@@ -26,6 +26,8 @@ const renderItemList = (item) =>{
         }
     }
 
+    console.log('item => ',item.name)
+
     return `  <button onclick='showPurchaseBar(${JSON.stringify(item)}); playClickingSound()'  class="w-full 
    h-40 2xl:h-48 flex flex-col  justify-center gap-2  bg-gradient-to-b from-gray-700/20 to-gray-800/20 items-center btn-item overflow-hidden p-1.5 relative"
   ${disabledBtn && 'disabled'}>
@@ -42,7 +44,7 @@ const renderItemList = (item) =>{
        
         <div class="h-full aspect-square flex justify-center items-center shrink-0 z-10  "
         >
-         <img class="aspect-square h-4/6 img-item" src="img/wallet.png"/>
+         <img class="aspect-square h-4/6 img-item" src="http://103.91.190.200:3322/img/${item.name}.png"/>
 </div>
 
    

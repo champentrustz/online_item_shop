@@ -41,7 +41,7 @@ const showItemDetail = () => {
     purchaseData.item.items && purchaseData.item.items.map((item) => {
         $('#items-detail').append(`<div class=" w-full h-10 shrink-0 flex justify-start items-center gap-2 bg-black bg-opacity-50 p-1 overflow-hidden">
 <div class="h-full aspect-square flex justify-center items-center shrink-0 relative">
-<img class="h-5/6 object-cover" src="img/wallet.png"/>
+<img class="h-5/6 object-cover" src="http://103.91.190.200:3322/img/${item.item}.png"/>
   
 </div>
 
@@ -134,7 +134,7 @@ const purchaseComponent = () => {
        
         <div class="h-full aspect-square flex justify-center items-center shrink-0 z-10  "
         style="background: linear-gradient(135deg, transparent 9px, rgba(20, 20, 20,1) 0)">
-       <img class=" w-4/6 object-cover" src="img/wallet.png"/>
+       <img class=" w-4/6 object-cover" src="http://103.91.190.200:3322/img/${purchaseData.item.name}.png"/>
 </div>
        
 </div>
