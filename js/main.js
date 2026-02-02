@@ -180,6 +180,7 @@ window.addEventListener("message", async function (event) {
 document.addEventListener("DOMContentLoaded", async(event) => {
 
 
+    showLoading()
     myToken = getParam('token')
     myPlayerName = await getPlayerName()
 
