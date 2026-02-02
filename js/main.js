@@ -47,10 +47,10 @@ let purchaseData = {
 
 const db = firebase.firestore();
 
-const getItemLimit = async () => {
-    const res = await fetch('https://glorious_itemmall/get_item_limit')
-    return await res.json()
-}
+// const getItemLimit = async () => {
+//     const res = await fetch('https://glorious_itemmall/get_item_limit')
+//     return await res.json()
+// }
 
 const showLayout = () => {
     $('#main').html(`
@@ -123,11 +123,13 @@ window.addEventListener("message", async function (event) {
 
     if (action === 'display') {
 
-        const res = await getItemLimit();
+        const res = await getPurchaseHistory();
 
-        todayItems = res.todayItems
-        allTimeItems = res.allTimeItems
-        weekItems = res.weekItems
+        console.log('purchase history => ',res)
+
+        todayItems = res.todayItems || []
+        allTimeItems = res.allTimeItems || []
+        weekItems = res.weekItems || []
 
 
         specialGasha = {
@@ -179,7 +181,7 @@ document.addEventListener("DOMContentLoaded", async(event) => {
 
     const token = getParam('token')
 
-    console.log(token)
+    // console.log(token)
 
     showLayout();
 });
