@@ -13,7 +13,7 @@ const showLoading = (id) =>{
 
     const content = document.getElementById(`${id}`)
 
-    content.innerHTML = `<div class="bg-neutral-950 min-w-screen min-h-full flex justify-center items-center flex-col gap-4">
+    content.innerHTML = `<div class="bg-neutral-950 min-w-full min-h-screen flex justify-center items-center flex-col gap-4">
     <div class="loader"></div>
     <p class="text-gray-400 text-xs">กำลังโหลด...</p>
 </div>`
