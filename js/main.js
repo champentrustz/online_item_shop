@@ -183,11 +183,18 @@ document.addEventListener("DOMContentLoaded", async(event) => {
     showLoading('main')
     myToken = getParam('token')
 
-    console.log('fetch => ',myToken);
 
-    myPlayerName = await getPlayerName()
+    const res = await getPlayerName()
+
+    if(!res.ok){
+        showUnAuthorized()
+        return
+    }
+
+    myPlayerName = res.playerName
 
     console.log('player name => ',myPlayerName)
+
 
     itemAll = await getItemAll()
 
