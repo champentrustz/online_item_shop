@@ -19,7 +19,7 @@ const confirmPurchase = async () => {
 
 
         if (res.status) {
-            const res = await getItemLimit();
+            const res = await getPurchaseHistory();
             todayItems = res.todayItems
             allTimeItems = res.allTimeItems
             weekItems = res.weekItems
