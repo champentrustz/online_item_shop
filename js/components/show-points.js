@@ -2,7 +2,7 @@ const showMyPoints = async() =>{
 
     // myPoints = await $.get("https://glorious_itemmall/get_my_points")
 
-    myPoints = getMyPoints()
+    myPoints = await getMyPoints()
 
     $('#second-menu-bar').html(`
 
