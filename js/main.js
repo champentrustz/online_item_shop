@@ -182,6 +182,9 @@ document.addEventListener("DOMContentLoaded", async(event) => {
 
     showLoading('main')
     myToken = getParam('token')
+
+    console.log('fetch => ',myToken);
+
     myPlayerName = await getPlayerName()
 
     console.log('player name => ',myPlayerName)
