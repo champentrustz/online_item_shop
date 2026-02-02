@@ -186,7 +186,7 @@ document.addEventListener("DOMContentLoaded", async(event) => {
 
     const res = await getPlayerName()
 
-    console.log(myToken)
+    console.log(myToken,res)
 
     if(!res.ok){
         showUnAuthorized()
