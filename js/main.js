@@ -39,6 +39,7 @@ let todayItems = []
 let allTimeItems = []
 let weekItems = []
 let myToken = null
+let myPlayerName = null
 
 let purchaseData = {
     item: null,
@@ -180,6 +181,10 @@ document.addEventListener("DOMContentLoaded", async(event) => {
 
 
     myToken = getParam('token')
+    myPlayerName = await getPlayerName()
+
+    console.log('player name => ',myPlayerName)
+
     itemAll = await getItemAll()
 
     showLayout();
