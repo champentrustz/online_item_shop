@@ -10,5 +10,6 @@ const purchaseItem = async(id, amount) =>{
 
     const res = await fetch(`${apiUrl}/query?token=${myToken}&event=shop:buy&key=${id}&count=${amount}`);
     const data = await res.json();
+    console.log(data)
     return data.response.status
 }
