@@ -1,7 +1,7 @@
 {
   "rewrites": [
     {
-      "source": "/api-proxy/:path*",
+      "source": "/api/:path*",
       "destination": "http://103.91.190.200:30120/:path*"
     }
   ]
