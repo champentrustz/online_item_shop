@@ -199,7 +199,7 @@ document.addEventListener("DOMContentLoaded", async(event) => {
     myPlayerName = res.response.playerName
 
 
-    itemAll = await getItemAllTest()
+    itemAll = await getItemAll()
 
     console.log(itemAll)
 
