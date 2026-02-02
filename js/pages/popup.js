@@ -28,7 +28,7 @@ const showPurchaseFail = () =>{
         <div class="w-96 h-72 flex flex-col gap-4 justify-center items-center">
                  <div class="flex flex-col justify-center items-center">
                  
-                <p class="text-5xl strong-font text-green-400 shrink-0 purchase-title" style="font-style: italic">FAILED</p>
+                <p class="text-5xl strong-font text-red-400 shrink-0 purchase-title" style="font-style: italic">FAILED</p>
                 
         
             <p class="text text-white shrink-0 purchase-detail">เกิดข้อผิดพลาด</p>
