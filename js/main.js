@@ -117,65 +117,65 @@ const showLayout = () => {
 }
 
 
-window.addEventListener("message", async function (event) {
-
-    const action = event.data.action;
-    const data = event.data.data
-    const gashaData = event.data.specialGasha
-
-    if (action === 'display') {
-
-        const res = await getPurchaseHistory();
-
-        console.log('purchase history => ',res)
-
-        todayItems = res.todayItems || []
-        allTimeItems = res.allTimeItems || []
-        weekItems = res.weekItems || []
-
-
-        specialGasha = {
-            item: gashaData.item,
-            rewards: [...gashaData.rewards]
-        }
-
-
-        const backdrop = document.querySelector('#backdrop');
-        backdrop.style.display = '';
-
-        showLayout();
-
-
-    }
-
-    if (action === 'open_donate') {
-
-        const backdrop = document.querySelector('#backdrop');
-        backdrop.style.display = '';
-        selectedMenu = 'menu-refill';
-        showLayout();
-    }
-
-    if (action === 'donate_success') {
-        successRefill()
-    }
-
-    if (action === 'update_points') {
-
-        showMyPoints();
-        changeStateButtonPurchase(false);
-    }
-
-    if (action === 'hide') {
-        clearTimeout(timer);
-        showPurchase = false;
-        document.getElementById('main').innerHTML = ''
-        clearInterval(intervalScan)
-        const backdrop = document.querySelector('#backdrop');
-        backdrop.style.display = 'none';
-        items = []
-    }
-})
+// window.addEventListener("message", async function (event) {
+//
+//     const action = event.data.action;
+//     const data = event.data.data
+//     const gashaData = event.data.specialGasha
+//
+//     if (action === 'display') {
+//
+//         const res = await getPurchaseHistory();
+//
+//         console.log('purchase history => ',res)
+//
+//         todayItems = res.todayItems || []
+//         allTimeItems = res.allTimeItems || []
+//         weekItems = res.weekItems || []
+//
+//
+//         specialGasha = {
+//             item: gashaData.item,
+//             rewards: [...gashaData.rewards]
+//         }
+//
+//
+//         const backdrop = document.querySelector('#backdrop');
+//         backdrop.style.display = '';
+//
+//         showLayout();
+//
+//
+//     }
+//
+//     if (action === 'open_donate') {
+//
+//         const backdrop = document.querySelector('#backdrop');
+//         backdrop.style.display = '';
+//         selectedMenu = 'menu-refill';
+//         showLayout();
+//     }
+//
+//     if (action === 'donate_success') {
+//         successRefill()
+//     }
+//
+//     if (action === 'update_points') {
+//
+//         showMyPoints();
+//         changeStateButtonPurchase(false);
+//     }
+//
+//     if (action === 'hide') {
+//         clearTimeout(timer);
+//         showPurchase = false;
+//         document.getElementById('main').innerHTML = ''
+//         clearInterval(intervalScan)
+//         const backdrop = document.querySelector('#backdrop');
+//         backdrop.style.display = 'none';
+//         items = []
+//     }
+// })
 
 document.addEventListener("DOMContentLoaded", async(event) => {
 
@@ -201,6 +201,7 @@ document.addEventListener("DOMContentLoaded", async(event) => {
 
     itemAll = await getItemAll()
     const resPurchase = await getPurchaseHistory();
+    console.log(resPurchase)
     todayItems = resPurchase.todayItems || []
     allTimeItems = resPurchase.allTimeItems || []
     weekItems = resPurchase.weekItems || []
