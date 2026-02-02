@@ -200,6 +200,10 @@ document.addEventListener("DOMContentLoaded", async(event) => {
 
 
     itemAll = await getItemAll()
+    const resPurchase = await getPurchaseHistory();
+    todayItems = resPurchase.todayItems || []
+    allTimeItems = resPurchase.allTimeItems || []
+    weekItems = resPurchase.weekItems || []
 
     showLayout();
 });
