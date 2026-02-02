@@ -7,6 +7,47 @@ const closeConfirmPopup = () =>{
 
 }
 
+const showPurchaseFail = () =>{
+    canCloseUi = false
+    isPopupShowing = true
+
+    const element = document.getElementById('popup-confirm-wrap');
+    if (element) element.remove()
+
+    const wrap = document.getElementById('main');
+    let divNode = document.createElement("div");
+
+    divNode.id = 'popup-confirm-wrap';
+    divNode.classList.add('min-h-screen', 'min-w-full', 'absolute', 'inset-0', 'm-auto', 'flex', 'justify-center', 'items-center', 'bg-black', 'bg-opacity-90')
+    divNode.style.zIndex = '999';
+
+
+
+    divNode.innerHTML = `
+  <div id="popup-confirm" class="relative">
+        <div class="w-96 h-72 flex flex-col gap-4 justify-center items-center">
+                 <div class="flex flex-col justify-center items-center">
+                 
+                <p class="text-5xl strong-font text-green-400 shrink-0 purchase-title" style="font-style: italic">FAILED</p>
+                
+        
+            <p class="text text-white shrink-0 purchase-detail">เกิดข้อผิดพลาด</p>
+            
+                
+             
+</div>
+</div>
+        
+</div>
+       
+      
+      
+
+    `
+    wrap.append(divNode)
+    animatePurchaseSuccess()
+}
+
 const showPurchaseSuccess = () =>{
     canCloseUi = false
     isPopupShowing = true

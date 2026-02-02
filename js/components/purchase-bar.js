@@ -25,6 +25,8 @@ const confirmPurchase = async () => {
             weekItems = res.weekItems
             showMyPoints();
             showPurchaseSuccess()
+        }else{
+            showPurchaseFail()
         }
 
     } else {
