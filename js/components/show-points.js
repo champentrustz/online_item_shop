@@ -62,7 +62,7 @@ px-2 h-full bg-lime-300 bg-opacity-10 hover:bg-opacity-15 border border-lime-300
 <span class="text-amber-200">${numberWithCommas(myPoints)} ฿</span>
 </div>
 
-<div id="player-name">${myPlayerName}</div>
+<div id="player-name" class="text-xs text-gray-300 px-2">${myPlayerName}</div>
 
     `)
 }
