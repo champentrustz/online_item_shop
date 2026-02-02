@@ -15,10 +15,7 @@ const confirmPurchase = async () => {
         showPurchase = !showPurchase;
 
 
-        const res = await $.post("https://glorious_itemmall/purchase", JSON.stringify({
-            id: purchaseData.item.id,
-            amount: purchaseData.amount
-        }));
+        const res = await purchaseItem(purchaseData.item.id, purchaseData.amount)
 
 
         if (res.status) {

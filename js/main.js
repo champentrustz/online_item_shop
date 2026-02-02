@@ -24,7 +24,7 @@ const menu = [
 ]
 
 let specialGasha = {}
-
+const apiUrl = 'http://103.91.190.200:30120/axm_donate'
 let itemAll = {}
 let items = null;
 let canCloseUi = true
@@ -38,6 +38,7 @@ let mySpecialPoints = 0
 let todayItems = []
 let allTimeItems = []
 let weekItems = []
+let myToken = null
 
 let purchaseData = {
     item: null,
@@ -177,11 +178,9 @@ window.addEventListener("message", async function (event) {
 
 document.addEventListener("DOMContentLoaded", async(event) => {
 
+
+    myToken = getParam('token')
     itemAll = await getItemAll()
-
-    const token = getParam('token')
-
-    // console.log(token)
 
     showLayout();
 });

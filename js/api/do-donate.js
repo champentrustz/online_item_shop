@@ -1,4 +1,11 @@
-const doDonate = async() =>{
-    const res = await fetch("http://103.91.190.10:30120/axm_donate/query?token=id&event=qrcode&amount=500");
+const doDonate = async(amount) =>{
+
+    if(myToken === null) return
+
+    amount = parseInt(amount)
+
+    if(amount <= 0) return
+
+    const res = await fetch(`${apiUrl}/query?token=${myToken}&event=qrcode&amount=${amount}`);
     return await res.json();
 }
