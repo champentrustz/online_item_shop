@@ -26,7 +26,7 @@ const renderItemList = (item) =>{
         }
     }
 
-    console.log('item => ',item.name)
+
 
     return `  <button onclick='showPurchaseBar(${JSON.stringify(item)}); playClickingSound()'  class="w-full 
    h-40 2xl:h-48 flex flex-col  justify-center gap-2  bg-gradient-to-b from-gray-700/20 to-gray-800/20 items-center btn-item overflow-hidden p-1.5 relative"

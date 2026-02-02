@@ -17,6 +17,7 @@ const confirmPurchase = async () => {
 
         const res = await purchaseItem(purchaseData.item.id, purchaseData.amount)
 
+        console.log('purchase res => ',res)
 
         if (res.status) {
             const res = await getPurchaseHistory();

@@ -1,6 +1,6 @@
 const showItems = () =>{
 
-    console.log('show items');
+
 
     $('#main-content').append(`
 <div class="w-full h-full overflow-hidden flex flex-col gap-4">
@@ -28,7 +28,7 @@ const showItems = () =>{
 
 `);
 
-    console.log(items)
+
 
 
     if(items.length !== 0){

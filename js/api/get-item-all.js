@@ -9,7 +9,7 @@ const getItemAll = async() =>{
         const data = snapshot.data();
         return data;
     } else {
-        console.log("No such document!");
+
         return {};
     }
 
