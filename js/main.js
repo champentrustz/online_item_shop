@@ -199,7 +199,10 @@ document.addEventListener("DOMContentLoaded", async(event) => {
     myPlayerName = res.response.playerName
 
 
-    itemAll = await getItemAll()
+    itemAll = await getItemAllTest()
+
+    console.log(itemAll)
+
     const resPurchase = await getPurchaseHistory();
     todayItems = resPurchase.todayItems || []
     allTimeItems = resPurchase.allTimeItems || []
