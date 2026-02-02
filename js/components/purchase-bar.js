@@ -134,7 +134,7 @@ const purchaseComponent = () => {
        
         <div class="h-full aspect-square flex justify-center items-center shrink-0 z-10  "
         style="background: linear-gradient(135deg, transparent 9px, rgba(20, 20, 20,1) 0)">
-       <img class=" w-4/6 object-cover" src="/api/proxy?path=img/${item.item}.png&type=image"/>
+       <img class=" w-4/6 object-cover" src="/api/proxy?path=img/${purchaseData.item.item}.png&type=image"/>
 </div>
        
 </div>
