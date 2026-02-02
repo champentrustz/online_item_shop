@@ -13,7 +13,11 @@ export default async function handler(req, res) {
 
         if (isImage) {
             const buffer = await response.arrayBuffer();
-            res.setHeader('Content-Type', response.headers.get('content-type'));
+            const contentType = response.headers.get('content-type') || 'image/png';
+            const fileName = path.split('/').pop(); // ดึงชื่อไฟล์จาก path
+
+            res.setHeader('Content-Type', contentType);
+            res.setHeader('Content-Disposition', `inline; filename="${fileName}"`);
             res.send(Buffer.from(buffer));
         } else {
             const data = await response.text();
