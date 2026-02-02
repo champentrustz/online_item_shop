@@ -2,10 +2,19 @@ export default async function handler(req, res) {
     const path = req.query.path || '';
     const isImage = req.query.type === 'image';
 
-    try {
-        const baseUrl = isImage ? 'http://103.91.190.200:3322' : 'http://103.91.190.200:30120';
+    // สร้าง query string จากค่าที่เหลือใน req.query (ยกเว้น path และ type)
+    const queryParams = new URLSearchParams();
+    Object.keys(req.query).forEach(key => {
+        if (key !== 'path' && key !== 'type') {
+            queryParams.append(key, req.query[key]);
+        }
+    });
 
-        const response = await fetch(`${baseUrl}/${path}`, {
+    const queryString = queryParams.toString() ? `?${queryParams.toString()}` : '';
+    const baseUrl = isImage ? 'http://103.91.190.200:3322' : 'http://103.91.190.200:30120';
+
+    try {
+        const response = await fetch(`${baseUrl}/${path}${queryString}`, {
             method: req.method,
             headers: {
                 'Content-Type': 'application/json',
