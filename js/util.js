@@ -44,7 +44,7 @@ const renderItemList = (item) =>{
        
         <div class="h-full aspect-square flex justify-center items-center shrink-0 z-10  "
         >
-         <img class="aspect-square h-4/6 img-item" src="${imgUrl}/${item.item}.png"/>
+         <img class="aspect-square h-4/6 img-item" src="/api/proxy?path=img/${item.item}.png&type=image"/>
 </div>
 
    

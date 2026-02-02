@@ -25,7 +25,6 @@ const menu = [
 
 let specialGasha = {}
 const apiUrl = '/api-proxy/axm_donate'
-const imgUrl = '/img-proxy'
 let itemAll = {}
 let items = null;
 let canCloseUi = true

@@ -3,10 +3,6 @@
     {
       "source": "/api-proxy/:path*",
       "destination": "/api/proxy?path=:path*"
-    },
-    {
-      "source": "/img-proxy/:path*",
-      "destination": "http://103.91.190.200:3322/img/:path*"
     }
   ]
 }
