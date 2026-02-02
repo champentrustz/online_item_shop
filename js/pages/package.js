@@ -29,7 +29,7 @@ const renderPackageItem = (item,index) => {
         let temp = ''
         item.items.map(itemList => {
             temp += `<div class="h-8 shrink-0 flex gap-2 w-full px-1">
-     <img class="aspect-square h-full shrink-0" src="http://103.91.190.200:3322/img/${item.name}.png"/>
+     <img class="aspect-square h-full shrink-0" src="http://103.91.190.200:3322/img/${item.item}.png"/>
      <div class="w-full h-full flex items-center text-xs text-gray-300 whitespace-nowrap overflow-hidden">${itemList.label}</div>
      <div class="h-full aspect-square flex justify-end items-center text-base text-gray-300 shrink-0 strong-font" style="font-style: italic">x${itemList.count}</div>
 </div>`
@@ -55,7 +55,7 @@ m-auto text-4xl glorious-font text-green-400" style="z-index: 999;">
        <div class="w-full h-full flex justify-center  items-center flex-col gap-2 overflow-hidden z-10">
         <div class="flex text-sm shrink-0 justify-center items-center text-white overflow-hidden">${item.label} ${item.day !== undefined ? `[${item.day}] วัน` : ''}</div>
         
-         <img class="aspect-square w-28 img-item shrink-0" src="http://103.91.190.200:3322/img/${item.name}.png"/>
+         <img class="aspect-square w-28 img-item shrink-0" src="http://103.91.190.200:3322/img/${item.item}.png"/>
          
         
         <div class="w-full flex flex-col justify-center items-center">
