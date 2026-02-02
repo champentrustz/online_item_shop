@@ -186,6 +186,10 @@ document.addEventListener("DOMContentLoaded", async(event) => {
 
     const res = await getPlayerName()
 
+    if(res === undefined){
+        showUnAuthorized()
+        return
+    }
 
     if(!res.ok){
         showUnAuthorized()
