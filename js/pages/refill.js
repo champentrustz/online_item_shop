@@ -151,7 +151,7 @@ const successRefill = async () => {
 
     if(!element) return;
 
-    myPoints = await $.get("https://glorious_itemmall/get_my_points")
+    myPoints = await getMyPoints()
     showMyPoints();
 
     $('#main-content').html(`

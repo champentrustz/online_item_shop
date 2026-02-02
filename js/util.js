@@ -186,11 +186,18 @@ const numberWithCommas = (x) => {
 }
 
 
+function getParam(key) {
+    const params = new URLSearchParams(window.location.search);
+    return params.get(key);
+}
+
 const closeWindow = () =>{
     if(canCloseUi){
         $.get("https://glorious_itemmall/closeMallWindow");
     }
 }
+
+
 
 $(document).on('keydown', (e) => {
     if (e.which === keys.ESC || e.which === keys.F11) {

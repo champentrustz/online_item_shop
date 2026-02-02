@@ -177,6 +177,9 @@ document.addEventListener("DOMContentLoaded", async(event) => {
 
     itemAll = await getItemAll()
 
+    const token = getParam('token')
+
+    console.log(token)
 
     showLayout();
 });
