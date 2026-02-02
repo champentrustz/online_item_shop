@@ -26,7 +26,7 @@ const showMyPoints = async() =>{
 <!--<div class="text-sm z-10">สะสมแต้ม</div>-->
 <!--</button>-->
 
-<button onclick="showPopupVip(); playClickingSound()" class="btn-submit w-auto 
+<button onclick="showPopupVip(); playClickingSound()" class="shrink-0 btn-submit w-auto 
 px-2 h-full bg-lime-300 bg-opacity-10 hover:bg-opacity-15 border border-lime-300/30 text-lime-300  flex justify-center items-center gap-1 text-xs relative">
 
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-3/6 aspect-square" style="margin-bottom: 2px">
@@ -37,7 +37,7 @@ px-2 h-full bg-lime-300 bg-opacity-10 hover:bg-opacity-15 border border-lime-300
 <div class="">ซื้อ VIP</div>
 </button>
 
-<button onclick="selectMenu('menu-refill'); playClickingSound()" class="btn-submit w-auto px-2.5 h-full border border-red-400/30 hover:bg-opacity-15  text-rose-400
+<button onclick="selectMenu('menu-refill'); playClickingSound()" class="btn-submit shrink-0 w-auto px-2.5 h-full border border-red-400/30 hover:bg-opacity-15  text-rose-400
   flex justify-center items-center gap-1 text-xs bg-rose-400 bg-opacity-10">
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-2/5 aspect-square ">
   <path d="M21 6.375c0 2.692-4.03 4.875-9 4.875S3 9.067 3 6.375 7.03 1.5 12 1.5s9 2.183 9 4.875z" />
@@ -51,7 +51,7 @@ px-2 h-full bg-lime-300 bg-opacity-10 hover:bg-opacity-15 border border-lime-300
 
 
 
- <div class=" h-full w-28 2xl:w-36 flex  justify-center gap-1 items-center bg-amber-200 bg-opacity-10 px-2.5 text-xs relative">
+ <div class=" h-full w-28 2xl:w-36 flex shrink-0 justify-center gap-1 items-center bg-amber-200 bg-opacity-10 px-2.5 text-xs relative">
     
      
   
@@ -62,7 +62,7 @@ px-2 h-full bg-lime-300 bg-opacity-10 hover:bg-opacity-15 border border-lime-300
 <span class="text-amber-200">${numberWithCommas(myPoints)} ฿</span>
 </div>
 
-<div id="player-name" class="text-xs text-gray-300 px-2">${myPlayerName}</div>
+<div id="player-name" class="text-xs text-gray-300 px-2 shrink-0">${myPlayerName}</div>
 
     `)
 }
