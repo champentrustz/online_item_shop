@@ -220,14 +220,14 @@ const showScanPage = () => {
     $('#main-content').html(`
 <div class="w-full h-full flex flex-col justify-center items-center gap-2">
     
-     <div class="w-2/5 object-cover shrink-0 flex justify-center items-center overflow-hidden">
+     <div class="h-full object-cover shrink-0 flex justify-center items-center overflow-hidden">
       <img class="w-full h-full" src="${refillData.url}"  />
 </div>
 
  <button onclick="cancelRefill()" class="px-2 shrink-0 h-10 bg-red-400 bg-opacity-10 
        hover:bg-opacity-20 text-xs text-red-400 flex justify-center items-center border border-red-400/30">ยกเลิกการเติมเงิน</button>
        
-           <div class="text-red-400 flex h-10 w-full items-center shrink-0 text-xs">* ระบบจะทำการเติมพ้อยท์อัตโนมัติหลังจากสแกน (อย่าปิดหน้าต่าง) หากพบปัญหากรุณาติดต่อที่ดิสคอร์ด</div>
+           <div class="text-red-400 flex h-10 shrink-0 w-full items-center shrink-0 text-xs">* ระบบจะทำการเติมพ้อยท์อัตโนมัติหลังจากสแกน (อย่าปิดหน้าต่าง) หากพบปัญหากรุณาติดต่อที่ดิสคอร์ด</div>
 
 
 </div>
