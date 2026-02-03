@@ -218,47 +218,17 @@ const showScanPage = () => {
 
 
     $('#main-content').html(`
-<div class="w-full h-full flex justify-center items-center gap-4">
-    <div class="w-3/5 h-full flex flex-col gap-2">
-        <div class="w-full h-8 shrink-0 flex gap-2 justify-between items-center text-xs text-gray-400 ">
-        
-        <div class="flex items-center gap-2">
-         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-3.5 h-3.5">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0ZM3.75 12h.007v.008H3.75V12Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm-.375 5.25h.007v.008H3.75v-.008Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
-</svg>
-
-        รายละเอียดการโดเนท
-</div>
-       
-       <button onclick="cancelRefill()" class="w-16 h-5/6 bg-red-400 bg-opacity-10 
-       hover:bg-opacity-20 text-xs text-red-400 flex justify-center items-center border border-red-400/30">ยกเลิกการเติมเงิน</button>
-        
-        </div>
-     
-
-<div class="w-full h-8 shrink-0 flex gap-2 items-center text-xs text-gray-400 ">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-3.5 h-3.5">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0ZM3.75 12h.007v.008H3.75V12Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm-.375 5.25h.007v.008H3.75v-.008Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
-</svg>
-
-        รายละเอียดสินค้า
-        </div>
-        
-        <div class="w-full h-full  bg-gray-500 bg-opacity-20 flex flex-col text-gray-400 gap-3 p-4 text-xs">
-         <p class="text-gray-300 flex items-center gap-3"><span class="h-1.5 w-1.5 rounded-full bg-amber-200 bg-opacity-70 shrink-0"></span> ได้รับพ้อยท์ทั้งหมด ${refillData.data.points} พ้อยท์</p>
-        <p class="text-gray-300 flex items-center gap-3"><span class="h-1.5 w-1.5 rounded-full bg-amber-200 bg-opacity-70 shrink-0"></span>ได้รับโบนัสจำนวน ${refillData.data.bonus} พ้อยท์</p>
-         <p class="text-gray-300 flex items-center gap-3"><span class="h-1.5 w-1.5 rounded-full bg-amber-200 bg-opacity-70 shrink-0"></span> ราคา <span class="text-amber-200">${refillData.data.price}</span>บาท</p>
-</div>
-
-    <div class="text-red-400 flex h-10 w-full items-center shrink-0 text-xs">* ระบบจะทำการเติมพ้อยท์อัตโนมัติหลังจากสแกน (อย่าปิดหน้าต่าง) หากพบปัญหากรุณาติดต่อที่ดิสคอร์ด</div>
-        
-<!--        <div class="w-full h-14 shrink-0 flex justify-center items-center p-2">-->
-<!--         <button onclick="confirmRefill()" class="h-full w-full rounded-md bg-green-500 text-xl text-gray-100 flex justify-center items-center hover:bg-green-600">ยืนยันการโดเนทเพื่อได้รับพ้อยท์</button>-->
-<!--</div>-->
-</div>
-     <div class="w-2/5 h-full flex justify-center items-center overflow-hidden">
+<div class="w-full h-full flex flex-col justify-center items-center gap-2">
+    
+     <div class="w-2/5 object-cover shrink-0 flex justify-center items-center overflow-hidden">
       <img class="w-full h-full" src="${refillData.url}"  />
 </div>
+
+ <button onclick="cancelRefill()" class="px-2 shrink-0 h-5/6 bg-red-400 bg-opacity-10 
+       hover:bg-opacity-20 text-xs text-red-400 flex justify-center items-center border border-red-400/30">ยกเลิกการเติมเงิน</button>
+       
+           <div class="text-red-400 flex h-10 w-full items-center shrink-0 text-xs">* ระบบจะทำการเติมพ้อยท์อัตโนมัติหลังจากสแกน (อย่าปิดหน้าต่าง) หากพบปัญหากรุณาติดต่อที่ดิสคอร์ด</div>
+
 
 </div>
 
