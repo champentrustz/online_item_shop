@@ -176,7 +176,7 @@ const setCheckScan = () => {
     timeInterval = setInterval(async() => {
         const resDonateData = await getDonateData()
 
-        console.log('resDonateData => ',resDonateData)
+
 
         if(resDonateData.refId && resDonateData.status) {
             successRefill()
@@ -264,7 +264,7 @@ const selectRefillPoints = async (index) => {
 
     const res = await doDonate(price);
 
-    console.log('res donate => ',res)
+
 
     // const urlTest = 'https://cdn.discordapp.com/attachments/1294567556610396170/1329754801130704927/89373561_891187224673298_1180981969060626432_n.jpg?ex=678b7e2a&is=678a2caa&hm=8659847a01dd77b2a9aa782a5701624699c095a87b06ca3dc5ec13915bba7483&'
 

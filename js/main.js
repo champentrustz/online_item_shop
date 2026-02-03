@@ -201,7 +201,7 @@ document.addEventListener("DOMContentLoaded", async(event) => {
 
     itemAll = await getItemAll()
 
-    console.log(itemAll)
+
 
     const resPurchase = await getPurchaseHistory();
     todayItems = resPurchase.todayItems || []

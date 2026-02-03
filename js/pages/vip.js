@@ -226,7 +226,7 @@ const showPopupVip = async() => {
 
     const vipItems = itemAll[menuKey['menu-vip']]
 
-    console.log(vipItems)
+
 
     // const res2 = await fetch('https://glorious_itemmall/get_item_time')
     // const vipTime = await res2.json()
