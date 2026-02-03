@@ -202,7 +202,7 @@ const setFailedDelay = (duration) => {
 }
 
 const cancelRefill = () =>{
-    $.get("https://glorious_itemmall/cancel_refill")
+    cancelDonate()
     clearInterval(timeInterval);
     resetData();
     showRefill();
