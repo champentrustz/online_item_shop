@@ -145,6 +145,7 @@ const fetchRefill = async (amount) => {
 
 const successRefill = async () => {
 
+    cancelDonate()
     clearInterval(timeInterval);
 
     const element = document.getElementById('main-content')
@@ -157,9 +158,7 @@ const successRefill = async () => {
     $('#main-content').html(`
 <div class="w-full h-full flex flex-col gap-2 justify-center items-center">
     <p class="strong-font text-4xl text-green-400" style="font-style: italic">SUCCESSFUL</p>
-    <p class="text-gray-300 text-xs">โดเนทสำเร็จ</p>
-    <p class="text-gray-400  flex gap-2 text-xs">คุณได้โดเนทเงินจำนวน <span class="text-amber-200">${refillData.data.price}</span> บาท | จำนวนพ้อยท์ที่ได้รับคือ <span class="text-amber-200">${refillData.data.points}</span></p>
-</div> 
+    <p class="text-gray-300 text-xs">โดเนทสำเร็จ</p></div> 
 `);
 
 
