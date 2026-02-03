@@ -230,12 +230,11 @@ const showScanPage = () => {
         รายละเอียดการโดเนท
 </div>
        
-       <button onclick="cancelRefill()" class="w-16 h-5/6 bg-red-400 bg-opacity-10 hover:bg-opacity-20 text-xs text-red-400 flex justify-center items-center border border-red-400/30">ยกเลิก</button>
+       <button onclick="cancelRefill()" class="w-16 h-5/6 bg-red-400 bg-opacity-10 
+       hover:bg-opacity-20 text-xs text-red-400 flex justify-center items-center border border-red-400/30">ยกเลิกการเติมเงิน</button>
         
         </div>
-      <div class="w-full h-2/6 bg-red-400 bg-opacity-10 flex justify-center items-center text-xs text-red-400 gap-2">
-            กรุณาทำรายการภายใน <span id="timer">${modifyTimer(timeCoolDown)}</span> นาที
-</div>
+     
 
 <div class="w-full h-8 shrink-0 flex gap-2 items-center text-xs text-gray-400 ">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-3.5 h-3.5">
@@ -265,7 +264,7 @@ const showScanPage = () => {
 
 `);
 
-    setCoolDown();
+    // setCoolDown();
     // setIntervalCheckScan()
 
 }
