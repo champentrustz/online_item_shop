@@ -391,7 +391,9 @@ const showRefill = async() => {
 
     showLoadingPage();
 
-    const res = await  $.get("https://glorious_itemmall/get_donate_data")
+    const res = await getDonateData()
+
+    console.log(res)
 
 
     statusRefill = res.status
