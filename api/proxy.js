@@ -11,7 +11,7 @@ export default async function handler(req, res) {
     });
 
     const queryString = queryParams.toString() ? `?${queryParams.toString()}` : '';
-    const baseUrl = isImage ? 'http://103.91.190.200:3322' : 'http://103.91.190.10:30120';
+    const baseUrl = isImage ? 'http://103.91.190.200:3322' : 'http://103.91.190.200:30120';
 
     try {
         const response = await fetch(`${baseUrl}/${path}${queryString}`, {
