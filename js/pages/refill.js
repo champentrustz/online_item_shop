@@ -177,6 +177,8 @@ const setCheckScan = () => {
     timeInterval = setInterval(async() => {
         const resDonateData = await getDonateData()
 
+        console.log('resDonateData => ',resDonateData)
+
         if(resDonateData.refId && resDonateData.status) {
             successRefill()
         }
