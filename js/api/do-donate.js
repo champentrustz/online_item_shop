@@ -7,5 +7,6 @@ const doDonate = async(amount) =>{
     if(amount <= 0) return
 
     const res = await fetch(`${apiUrl}/query?token=${myToken}&event=qrcode&amount=${amount}`);
-    return await res.json();
+    const data = await res.json();
+    return data.response
 }

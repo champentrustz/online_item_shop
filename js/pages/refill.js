@@ -391,22 +391,18 @@ const showRefill = async() => {
 
     showLoadingPage();
 
-    const res = await getDonateData()
+    const resDonateData = await getDonateData()
 
-    console.log(res)
-
-
-    statusRefill = res.status
-    // failedCoolDown = res.delay
-
-
-
-    if(res.refData === undefined){
-        refillData.url = null
+    if(resDonateData.refId){
+        const resDonate = await doDonate(1)
+        refillData.url = resDonate.url
     }else{
-        refillData.url = res.refData.url
+        refillData.url = null
     }
 
+    statusRefill = resDonateData.status
+
+    // failedCoolDown = res.delay
 
     // console.log('statusRefill => ',statusRefill,' failedCoolDown => ',failedCoolDown,' refillData.url => ',refillData.url)
 
