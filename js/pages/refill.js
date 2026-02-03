@@ -272,9 +272,9 @@ const showScanPage = () => {
 
 const selectRefillPoints = async (index) => {
 
-    console.log('statusRefill => ',statusRefill)
-
-    if (!statusRefill) return;
+    // console.log('statusRefill => ',statusRefill)
+    //
+    // if (!statusRefill) return;
 
 
     const price = document.getElementById('input-price').value
