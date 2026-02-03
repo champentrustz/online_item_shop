@@ -272,6 +272,8 @@ const showScanPage = () => {
 
 const selectRefillPoints = async (index) => {
 
+    console.log('statusRefill => ',statusRefill)
+
     if (!statusRefill) return;
 
 
