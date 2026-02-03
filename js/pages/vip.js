@@ -131,10 +131,8 @@ const processPurchaseVip = async(id) =>{
     </svg>
 <span class="text-xs">กำลังซื้อ...</span>`
 
-    const res = await $.post("https://glorious_itemmall/purchase", JSON.stringify({
-        id: id,
-        amount : 1
-    }));
+    const res = await purchaseItem(id, 1)
+
 
     closePopupVip()
 
