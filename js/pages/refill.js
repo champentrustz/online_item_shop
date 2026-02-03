@@ -224,7 +224,7 @@ const showScanPage = () => {
       <img class="w-full h-full" src="${refillData.url}"  />
 </div>
 
- <button onclick="cancelRefill()" class="px-2 shrink-0 h-5/6 bg-red-400 bg-opacity-10 
+ <button onclick="cancelRefill()" class="px-2 shrink-0 h-10 bg-red-400 bg-opacity-10 
        hover:bg-opacity-20 text-xs text-red-400 flex justify-center items-center border border-red-400/30">ยกเลิกการเติมเงิน</button>
        
            <div class="text-red-400 flex h-10 w-full items-center shrink-0 text-xs">* ระบบจะทำการเติมพ้อยท์อัตโนมัติหลังจากสแกน (อย่าปิดหน้าต่าง) หากพบปัญหากรุณาติดต่อที่ดิสคอร์ด</div>
