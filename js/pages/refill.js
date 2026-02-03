@@ -220,8 +220,8 @@ const showScanPage = () => {
     $('#main-content').html(`
 <div class="w-full h-full flex flex-col justify-center items-center gap-2">
     
-     <div class="h-full object-cover shrink-0 flex justify-center items-center overflow-hidden">
-      <img class="w-full h-full" src="${refillData.url}"  />
+     <div class="h-full flex justify-center items-center overflow-hidden">
+      <img class="object-cover h-full" src="${refillData.url}"  />
 </div>
 
  <button onclick="cancelRefill()" class="px-2 shrink-0 h-10 bg-red-400 bg-opacity-10 
