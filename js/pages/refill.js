@@ -202,10 +202,14 @@ const setFailedDelay = (duration) => {
 }
 
 const cancelRefill = () =>{
-    cancelDonate()
     clearInterval(timeInterval);
-    resetData();
-    showRefill();
+    cancelDonate()
+    showLoadingPage()
+    setTimeout(() => {
+        resetData();
+        showRefill();
+    },2000)
+
 }
 
 const showScanPage = () => {
