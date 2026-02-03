@@ -397,7 +397,7 @@ const showRefill = async() => {
 
 
     statusRefill = res.status
-    failedCoolDown = res.delay
+    // failedCoolDown = res.delay
 
 
 
@@ -434,7 +434,6 @@ const showRefill = async() => {
 </div>
 
 
-${(!statusRefill) ? `<p class="flex gap-2 text-xs text-red-400">จะสามารถทำรายการอีกครั้งได้ภายใน <span id="timer">${modifyTimer(failedCoolDown)}</span> นาที</p>` : ``}
 
 <div class="grow justify-end h-full flex gap-2 items-center ">
 <div class="h-full w-auto flex items-center gap-2 justify-start">
@@ -455,9 +454,9 @@ ${(!statusRefill) ? `<p class="flex gap-2 text-xs text-red-400">จะสาม�
 </div>
 `);
 
-    if (!statusRefill) {
-        setFailedDelay();
-    }
+    // if (!statusRefill) {
+    //     setFailedDelay();
+    // }
 
     if (refillData.url === null) {
         showRefillList();
