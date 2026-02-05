@@ -53,7 +53,7 @@ const renderItemList = (item) =>{
        
        ${item.name === gashaName || selectedMenu === 'menu-weekly' ? ` <div class="w-full flex justify-center items-center h-8 shrink-0 absolute left-0 right-0 text-2xs text-red-400"
   style="bottom: 45px">
-        ${item.name === gashaName || selectedMenu === 'menu-weekly' ? `หมด 16/01/2026 06:00` : ``}
+        ${item.name === gashaName || selectedMenu === 'menu-weekly' ? `หมด 13/02/2026 06:00` : ``}
 </div>` : ``}
        
       

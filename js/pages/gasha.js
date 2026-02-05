@@ -1,4 +1,4 @@
-const gashaName = 'bp_6_gashapon'
+const gashaName = 'bp_7_gashapon'
 
 const processPurchaseGasha = () =>{
 
